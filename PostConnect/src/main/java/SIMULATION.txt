@@ -1,0 +1,32 @@
+http://localhost:8080
+
+//register a country
+@PostMapping("/olympics/country/register")
+
+//login to a country
+@GetMapping("/olympics/country/login/{countryCode}")
+
+//register an olympian by a country
+@PostMapping("/olympics/olympian/{countryCode}/register")
+
+//add an event
+@PostMapping("olympics/addEvent")
+
+//get all events
+@GetMapping("/getEvents")
+
+//register an event for an olympian by a country
+@PostMapping("/olympics/event/{countryCode}/{event_id}/{olympian_id}/eventregister")
+
+//Event Simulation
+@PostMapping("/olympics/admin/run/{eventName}")
+
+****************************************PROJECT LOGIC*****************************************
+The country is registered and could be logged in. Country could register the olympians
+and also register the olympians for events. The event is run with a gateway that randomly
+selects the olympians registered for the particular event. The medals are awarded and
+updated in tables olympians and country with their medal counts,rank,positions etc.
+The status of the event is updated once occurred to prevent logical error.
+MedalTally could be queried and other queries as instructed in the task cooperates with this logic.
+Program is verified and set back to initial state with no events run and no points assigned
+by setting the counts to 0. One can now checks for the events as new to ensure the correctness
