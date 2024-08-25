@@ -18,3 +18,6 @@ This project is a comprehensive platform for managing and simulating Olympic eve
 - **API:** RESTful Services
 
 ### Details in SIMULATION.txt
+
+### Change Database name and password for the system 
+
